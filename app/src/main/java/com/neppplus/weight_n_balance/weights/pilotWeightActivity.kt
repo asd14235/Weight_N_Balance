@@ -1,9 +1,9 @@
 package com.neppplus.weight_n_balance.weights
 
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import com.neppplus.weight_n_balance.R
 import kotlinx.android.synthetic.main.activity_pilot_weight.*
 import java.time.LocalDateTime
@@ -36,14 +36,16 @@ class pilotWeightActivity : AppCompatActivity() {
         var Strnow = cDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
         currentDate.text = Strnow.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
     }
+
     fun pilotWeightSlider() {
 
         pilotWeightSlider.addOnChangeListener { slider, value, fromUser ->
-            pilotWeightTxt.text = value.toInt().toString()
+
+            pilotWeightTxt.text = "${value.toInt().toString()} Kg"
 
         }
         pilotWeightSlider2.addOnChangeListener { slider, value, fromUser ->
-            pilotWeightTxt2.text = value.toInt().toString()
+            pilotWeightTxt2.text = "${value.toInt().toString()} Kg"
         }
         // Responds to when slider's value is changed
     }

@@ -60,6 +60,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:textSize="20dp"
+                            android:textColor="@color/white"
                             android:text="Pilot"/>
 
                         <TextView
@@ -67,10 +68,22 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="end"
+                            android:textColor="@color/white"
                             android:labelFor="@id/pilotWeightSlider"
                             android:layout_weight="1"
                             android:textSize="20dp"
                             android:text="100Kg"/>
+
+                        <EditText
+                            android:id="@+id/weightEdt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="몸무게를 입력하세요"
+                            android:textSize="13sp"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:visibility="gone"/>
 
                         <Button
                             android:id="@+id/pilotAddBtn"
@@ -115,6 +128,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="20dp"
                             android:layout_weight="1"
+                            android:textColor="@color/white"
                             android:text="Co Pilot"/>
 
                         <TextView
@@ -122,6 +136,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="end"
+                            android:textColor="@color/white"
                             android:layout_weight="1"
                             android:textSize="20dp"
                             android:text="80 Kg"/>
@@ -144,7 +159,11 @@
                         android:layout_height="wrap_content"
                         android:valueFrom="0.0"
                         android:value="100.0"
-                        android:valueTo="200.0"/>
+                        android:valueTo="200.0"
+                        app:thumbColor="@color/dark_blue"
+                        app:trackColor="@color/near_black"
+                        app:thumbStrokeColor="@color/black"
+                        app:haloColor="@color/white"/>
 
                 </LinearLayout>
 

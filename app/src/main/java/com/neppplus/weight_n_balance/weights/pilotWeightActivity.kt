@@ -27,6 +27,7 @@ class pilotWeightActivity : AppCompatActivity() {
     fun setValues() {
         currentDateTime()
         pilotWeightSlider()
+        pilotWeightInput()
 
     }
 
@@ -38,7 +39,6 @@ class pilotWeightActivity : AppCompatActivity() {
     }
 
     fun pilotWeightSlider() {
-
         pilotWeightSlider.addOnChangeListener { slider, value, fromUser ->
 
             pilotWeightTxt.text = "${value.toInt().toString()} Kg"
@@ -48,5 +48,16 @@ class pilotWeightActivity : AppCompatActivity() {
             pilotWeightTxt2.text = "${value.toInt().toString()} Kg"
         }
         // Responds to when slider's value is changed
+    }
+
+    fun pilotWeightInput() {
+        pilotAddBtn.setOnClickListener {
+            var pilotWeight = pilotWeightSlider.value
+
+            pilotWeightTxt.text = (pilotWeight + 10).toInt().toString()
+        }
+        pilotWeightTxt.setOnClickListener {
+
+        }
     }
 }

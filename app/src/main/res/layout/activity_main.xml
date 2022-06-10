@@ -9,19 +9,59 @@
         android:background="@color/middle_blue"
         android:padding="20dp">
 
-        <Button
-            android:id="@+id/weightBtn"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_blue"
-            android:text="Weight &amp; balance"/>
+            android:gravity="center"
+            android:text="Pilot"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ractangle_square"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/setPilotWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilot Weight"/>
+
+            <TextView
+                android:id="@+id/setCoPilotWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="CoPilot Weight"/>
 
 
 
+            <Button
+                android:id="@+id/weightBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dark_blue"
+                android:layout_marginTop="20dp"
+                android:text="Pilot 입력하기"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="FWD Passenger"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ractangle_square"
+            android:orientation="vertical">
 
 
+        </LinearLayout>
 
     </LinearLayout>
-
 
 </layout>

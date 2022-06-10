@@ -10,17 +10,22 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.neppplus.weight_n_balance.R
 import com.neppplus.weight_n_balance.Utils.HideKeyboard
-import com.neppplus.weight_n_balance.databinding.ActivityPilotWeightBinding
 import kotlinx.android.synthetic.main.activity_pilot_weight.*
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
 class pilotWeightActivity : AppCompatActivity() {
 
-    var pilotWeight : Int = 0
-    var pilotWeight2 : Int = 0
-    var weight : String = ""
-    lateinit var binding : ActivityPilotWeightBinding
+    var pilotWeight: Int = 0
+    var pilotWeight2: Int = 0
+    var pax1 : Int = 0
+    var pax2 : Int = 0
+    var pax3 : Int = 0
+    var aPax1 : Int = 0
+    var aPax2 : Int = 0
+    var aPax3 : Int = 0
+
+
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,9 +43,11 @@ class pilotWeightActivity : AppCompatActivity() {
     fun setValues() {
         currentDateTime()
         pilotWeightSlider()
-        pilotWeightInput()
-        coPilotWeightInput()
         conFirmBtn()
+        FwdPaxAdd()
+        FwdPaxWeight()
+        AftPaxAdd()
+        AftPaxWeight()
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -53,14 +60,13 @@ class pilotWeightActivity : AppCompatActivity() {
     fun pilotWeightSlider() {
         pilotWeightSlider.addOnChangeListener { slider, value, fromUser ->
             pilotWeight = pilotWeightSlider.value.toInt()
-            pilotWeightTxt.text = "${pilotWeight} KG"
+//            pilotWeightTxt.text = "${pilotWeight} KG"
+            weightEdt.setText(value.toInt().toString())
 
         }
         pilotWeightSlider2.addOnChangeListener { slider, value, fromUser ->
             pilotWeight2 = pilotWeightSlider2.value.toInt()
-
-            pilotWeightTxt2.text = "${pilotWeight2} KG"
-
+            weightEdt2.setText(value.toInt().toString())
 
         }
         // Responds to when slider's value is changed
@@ -68,70 +74,103 @@ class pilotWeightActivity : AppCompatActivity() {
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun pilotWeightInput() {
 
-        pilotWeightTxt.setOnClickListener {
-
-            pilotWeightTxt.visibility = View.GONE
-            weightEdt.visibility = View.VISIBLE
-        }
-
-            pilotAddBtn.setOnClickListener {
-                HideKeyboard.hideSoftInput(this,weightEdt)
-                weight = weightEdt.text.toString()
-
-                if (weightEdt.isVisible) {
-                    pilotWeightTxt.text = "${weight} KG"
-                    pilotWeightTxt.visibility = View.VISIBLE
-                    weightEdt.visibility = View.GONE
-                    PilotWeightHere.text = "${weight} KG"
-                }
-                else
-                {
-                weight = weightEdt.text.toString()
-                pilotWeightTxt.visibility = View.VISIBLE
-                weightEdt.visibility = View.GONE
-                    PilotWeightHere.text = "${pilotWeight} KG"}
-            }
-            }
-    fun coPilotWeightInput() {
-        pilotWeightTxt2.setOnClickListener {
-            pilotWeightTxt2.visibility = View.GONE
-            weightEdt2.visibility = View.VISIBLE
-        }
-
-        coPilotAddBtn.setOnClickListener {
-            HideKeyboard.hideSoftInput(this,weightEdt2)
-            weight = weightEdt2.text.toString()
-
-            if (weightEdt2.isVisible) {
-                pilotWeightTxt2.text = "${weight} KG"
-                pilotWeightTxt2.visibility = View.VISIBLE
-                weightEdt2.visibility = View.GONE
-                coPilotWeightHere.text = "${weight} KG"
-            }
-            else
-            {
-                weight = weightEdt2.text.toString()
-                pilotWeightTxt2.visibility = View.VISIBLE
-                weightEdt2.visibility = View.GONE
-                coPilotWeightHere.text = "${pilotWeight2} KG" }
-        }
-    }
     fun conFirmBtn() {
         conFirmBtn.setOnClickListener {
-
-                val pilotWeight = PilotWeightHere.text.toString()
-            val coPilotWeight = coPilotWeightHere.text.toString()
+            val pilotWeight = weightEdt.text.toString()
+            val coPilotWeight = weightEdt2.text.toString()
+            val pax1Weight = PaxWeightEdt1.text.toString()
+            val pax2Weight = PaxWeightEdt2.text.toString()
+            val pax3Weight = PaxWeightEdt3.text.toString()
+            val apax1Weight = AftPaxWeightEdt1.text.toString()
+            val apax2Weight = AftPaxWeightEdt2.text.toString()
+            val apax3Weight = AftPaxWeightEdt3.text.toString()
 
 //            inputData 변수설정
-                val resultIntent = Intent()
-                resultIntent.putExtra("pilotWeight", pilotWeight)
-            resultIntent.putExtra("coPilotWeight",coPilotWeight)
-                setResult(Activity.RESULT_OK,resultIntent)
+            val resultIntent = Intent()
+            resultIntent.putExtra("pilotWeight", pilotWeight)
+            resultIntent.putExtra("coPilotWeight", coPilotWeight)
+            resultIntent.putExtra("pax1",pax1Weight)
+            resultIntent.putExtra("pax2",pax2Weight)
+            resultIntent.putExtra("pax3",pax3Weight)
+            resultIntent.putExtra("apax1",apax1Weight)
+            resultIntent.putExtra("apax2",apax2Weight)
+            resultIntent.putExtra("apax3",apax3Weight)
+            setResult(Activity.RESULT_OK, resultIntent)
             finish()
 
         }
     }
+
+    fun FwdPaxAdd() {
+        addFPaxBtn.setOnClickListener {
+            if (!fpax2Layer.isVisible)
+                fpax2Layer.visibility = View.VISIBLE
+            addFPaxBtn.visibility = View.GONE
+            addFPaxBtn2.visibility = View.VISIBLE
+            PAXWeightSlider2.visibility = View.VISIBLE
+        }
+        addFPaxBtn2.setOnClickListener {
+            fPax3Layer.visibility = View.VISIBLE
+            addFPaxBtn2.visibility = View.GONE
+            addFPaxBtn3.visibility = View.VISIBLE
+            PAXWeightSlider3.visibility = View.VISIBLE
+        }
+        addFPaxBtn3.setOnClickListener {
+            fPax4Layer.visibility = View.VISIBLE
+            addFPaxBtn3.visibility = View.GONE
+            addFPaxBtn4.visibility = View.VISIBLE
+
+        }
+
     }
+
+    fun FwdPaxWeight() {
+        PAXWeightSlider.addOnChangeListener { slider, value, fromUser ->
+            pax1 = PAXWeightSlider.value.toInt()
+            PaxWeightEdt1.setText((value.toInt().toString()))
+        }
+        PAXWeightSlider2.addOnChangeListener { slider, value, fromUser ->
+            pax2 = PAXWeightSlider.value.toInt()
+            PaxWeightEdt2.setText((value.toInt().toString()))
+        }
+        PAXWeightSlider3.addOnChangeListener { slider, value, fromUser ->
+            pax3 = PAXWeightSlider.value.toInt()
+            PaxWeightEdt3.setText((value.toInt().toString()))
+        }
+
+    }
+
+    fun AftPaxAdd() {
+        AftPaxAddBtn1.setOnClickListener {
+            AftPaxLayer2.visibility = View.VISIBLE
+            AftPaxAddBtn1.visibility = View.GONE
+            AftPaxAddBtn2.visibility = View.VISIBLE
+            AftPAXWeightSlider2.visibility = View.VISIBLE
+        }
+        AftPaxAddBtn2.setOnClickListener {
+            AftPaxAddBtn2.visibility = View.GONE
+            AftPaxAddBtn3.visibility = View.VISIBLE
+            AftPaxLayer3.visibility = View.VISIBLE
+            AftPAXWeightSlider3.visibility = View.VISIBLE
+        }
+
+    }
+
+    fun AftPaxWeight() {
+        AftPAXWeightSlider1.addOnChangeListener { slider, value, fromUser ->
+            aPax1 = AftPAXWeightSlider1.value.toInt()
+            AftPaxWeightEdt1.setText((value.toInt().toString()))
+        }
+        AftPAXWeightSlider2.addOnChangeListener { slider, value, fromUser ->
+            aPax2 = AftPAXWeightSlider2.value.toInt()
+            AftPaxWeightEdt2.setText((value.toInt().toString()))
+        }
+        AftPAXWeightSlider3.addOnChangeListener { slider, value, fromUser ->
+            aPax3 = AftPAXWeightSlider3.value.toInt()
+            AftPaxWeightEdt3.setText((value.toInt().toString()))
+        }
+    }
+    }
+
 

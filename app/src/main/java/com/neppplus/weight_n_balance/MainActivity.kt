@@ -1,14 +1,17 @@
 package com.neppplus.weight_n_balance
 
 import android.app.Activity
-import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.neppplus.weight_n_balance.databinding.ActivityMainBinding
+import com.neppplus.weight_n_balance.dialog.CustomAlertDialog
 import com.neppplus.weight_n_balance.weights.pilotWeightActivity
+import kotlinx.android.synthetic.main.activity_fwd_pax_alert.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -27,17 +30,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.fwdPaxLayout.setOnClickListener {
 
-            val fwdAlert = LayoutInflater.from(this).inflate(R.layout.activity_fwd_pax_alert,null)
-            val mBuilder = AlertDialog.Builder(this)
-                .setView(fwdAlert)
-            val dialog = mBuilder.create()
-            dialog.window?.decorView?.setBackgroundResource(R.drawable.dialog_background)
-            dialog.show()
+            val alert = CustomAlertDialog(this)
+            alert.binding.titleTxt.text = "PAX 1"
 
+            alert.myDialog()
+
+            alert.binding.confirmBtn.setOnClickListener {
+                setPaxTxt1.text = "${alert.binding.alertPaxWeightEdt1.text}KG"
+                alert.dialog.dismiss()
+            }
         }
-
-
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

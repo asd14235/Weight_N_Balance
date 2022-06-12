@@ -9,7 +9,6 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.neppplus.weight_n_balance.R
-import com.neppplus.weight_n_balance.Utils.HideKeyboard
 import kotlinx.android.synthetic.main.activity_pilot_weight.*
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -36,6 +35,7 @@ class pilotWeightActivity : AppCompatActivity() {
     }
 
     fun setupEvents() {
+
 
     }
 

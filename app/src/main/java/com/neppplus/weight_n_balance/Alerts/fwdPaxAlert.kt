@@ -7,7 +7,6 @@ import kotlinx.android.synthetic.main.activity_fwd_pax_alert.*
 
 class fwdPaxAlert : AppCompatActivity() {
 
-
     var pax1 : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {

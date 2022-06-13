@@ -9,6 +9,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.neppplus.weight_n_balance.R
+import com.neppplus.weight_n_balance.weightData.WeightData
 import kotlinx.android.synthetic.main.activity_pilot_weight.*
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -17,13 +18,12 @@ class pilotWeightActivity : AppCompatActivity() {
 
     var pilotWeight: Int = 0
     var pilotWeight2: Int = 0
-    var pax1 : Int = 0
-    var pax2 : Int = 0
-    var pax3 : Int = 0
-    var aPax1 : Int = 0
-    var aPax2 : Int = 0
-    var aPax3 : Int = 0
-
+    var pax1: Int = 0
+    var pax2: Int = 0
+    var pax3: Int = 0
+    var aPax1: Int = 0
+    var aPax2: Int = 0
+    var aPax3: Int = 0
 
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -88,14 +88,27 @@ class pilotWeightActivity : AppCompatActivity() {
 
 //            inputData 변수설정
             val resultIntent = Intent()
-            resultIntent.putExtra("pilotWeight", pilotWeight)
-            resultIntent.putExtra("coPilotWeight", coPilotWeight)
-            resultIntent.putExtra("pax1",pax1Weight)
-            resultIntent.putExtra("pax2",pax2Weight)
-            resultIntent.putExtra("pax3",pax3Weight)
-            resultIntent.putExtra("apax1",apax1Weight)
-            resultIntent.putExtra("apax2",apax2Weight)
-            resultIntent.putExtra("apax3",apax3Weight)
+//            resultIntent.putExtra("pilotWeight", pilotWeight)
+//            resultIntent.putExtra("coPilotWeight", coPilotWeight)
+//            resultIntent.putExtra("pax1",pax1Weight)
+//            resultIntent.putExtra("pax2",pax2Weight)
+//            resultIntent.putExtra("pax3",pax3Weight)
+//            resultIntent.putExtra("apax1",apax1Weight)
+//            resultIntent.putExtra("apax2",apax2Weight)
+//            resultIntent.putExtra("apax3",apax3Weight)
+            resultIntent.putExtra(
+                "weightData",
+                WeightData(
+                    pilotWeight,
+                    coPilotWeight,
+                    pax1Weight,
+                    pax2Weight,
+                    pax3Weight,
+                    apax1Weight,
+                    apax2Weight,
+                    apax3Weight,
+                )
+            )
             setResult(Activity.RESULT_OK, resultIntent)
             finish()
 
@@ -171,6 +184,6 @@ class pilotWeightActivity : AppCompatActivity() {
             AftPaxWeightEdt3.setText((value.toInt().toString()))
         }
     }
-    }
+}
 
 

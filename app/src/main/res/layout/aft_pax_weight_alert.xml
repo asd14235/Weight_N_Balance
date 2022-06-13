@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/middle_blue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ractangle_square"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:text="AFT PAX 1"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/AftPaxWeightEdt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="몸무게를 입력하세요"
+                    android:textColorHint="@color/white"
+                    android:gravity="end"
+                    android:textColor="@color/white"
+                    android:background="@null"
+                    android:textSize="20sp"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:text=" KG"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/AftPAXWeightSlider1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:thumbColor="@color/dark_blue"
+                app:trackColor="@color/near_black"
+                app:thumbStrokeColor="@color/black"
+                app:haloColor="@color/white"
+                android:padding="20dp"
+                android:value="80.0"
+                android:valueFrom="0.0"
+                android:valueTo="200.0"/>
+
+            <ImageView
+                android:id="@+id/AftPaxAddBtn1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/plus_icon"/>
+
+
+            <LinearLayout
+                android:id="@+id/AftPaxLayer2"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:text="AFT PAX 2"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/AftPaxWeightEdt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="몸무게를 입력하세요"
+                    android:textColorHint="@color/white"
+                    android:gravity="end"
+                    android:textColor="@color/white"
+                    android:background="@null"
+                    android:textSize="20sp"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:text=" KG"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/AftPAXWeightSlider2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:thumbColor="@color/dark_blue"
+                app:trackColor="@color/near_black"
+                app:thumbStrokeColor="@color/black"
+                app:haloColor="@color/white"
+                android:visibility="gone"
+                android:padding="20dp"
+                android:value="80.0"
+                android:valueFrom="0.0"
+                android:valueTo="200.0"/>
+
+            <ImageView
+                android:id="@+id/AftPaxAddBtn2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:src="@drawable/plus_icon"/>
+
+            <LinearLayout
+                android:id="@+id/AftPaxLayer3"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:text="AFT PAX 3"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/AftPaxWeightEdt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="몸무게를 입력하세요"
+                    android:textColorHint="@color/white"
+                    android:gravity="end"
+                    android:textColor="@color/white"
+                    android:background="@null"
+                    android:textSize="20sp"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:text=" KG"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/AftPAXWeightSlider3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:thumbColor="@color/dark_blue"
+                app:trackColor="@color/near_black"
+                app:thumbStrokeColor="@color/black"
+                app:haloColor="@color/white"
+                android:padding="20dp"
+                android:value="80.0"
+                android:valueFrom="0.0"
+                android:valueTo="200.0"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/AftPaxAddBtn3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/plus_icon"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/conFirmBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수정하기"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/dark_blue"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+</layout>

@@ -3,18 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/KMC/AndroidStudioProjects/Weight_N_Balance/app/src/main/res/layout/activity_fwd_pax_alert.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/KMC/AndroidStudioProjects/Weight_N_Balance/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/NePPPlus_017/AndroidStudioProjects/Weight_N_Balance/app/src/main/res/drawable/ractangle_square.xml" value="0.176" />
         <entry key="..\:/Users/NePPPlus_017/AndroidStudioProjects/Weight_N_Balance/app/src/main/res/layout/activity_main.xml" value="0.3515625" />
         <entry key="..\:/Users/NePPPlus_017/AndroidStudioProjects/Weight_N_Balance/app/src/main/res/layout/activity_pilot_weight.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/NePPPlus_017/AndroidStudioProjects/Weight_N_Balance/app/src/main/res/layout/pilot_spinner_array.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/NePPPlus_017/AndroidStudioProjects/Weight_N_Balance/app/src/main/res/layout/weight_pilot.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/ddukk/AndroidStudioProjects/Weight_N_Balance/app/src/main/res/drawable/dialog_background.xml" value="0.3345" />
-        <entry key="..\:/Users/ddukk/AndroidStudioProjects/Weight_N_Balance/app/src/main/res/layout/activity_fwd_pax_alert.xml" value="0.5395833333333333" />
-        <entry key="..\:/Users/ddukk/AndroidStudioProjects/Weight_N_Balance/app/src/main/res/layout/activity_main.xml" value="0.6" />
+        <entry key="..\:/Users/ddukk/AndroidStudioProjects/Weight_N_Balance/app/src/main/res/layout/activity_main.xml" value="0.2695035460992908" />
         <entry key="..\:/Users/ddukk/AndroidStudioProjects/Weight_N_Balance/app/src/main/res/layout/activity_pilot_weight.xml" value="0.5541666666666667" />
-        <entry key="..\:/Users/ddukk/AndroidStudioProjects/Weight_N_Balance/app/src/main/res/layout/fwd_pax_alert.xml" value="0.5541666666666667" />
+        <entry key="..\:/asd/study/kotlin/Weight_N_Balance/app/src/main/res/drawable/ractangle_square.xml" value="0.176" />
+        <entry key="..\:/asd/study/kotlin/Weight_N_Balance/app/src/main/res/layout/activity_fwd_pax_alert.xml" value="0.36614583333333334" />
+        <entry key="..\:/asd/study/kotlin/Weight_N_Balance/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/asd/study/kotlin/Weight_N_Balance/app/src/main/res/layout/activity_pilot_weight.xml" value="0.36614583333333334" />
+        <entry key="..\:/asd/study/kotlin/Weight_N_Balance/app/src/main/res/layout/aft_pax_weight_alert.xml" value="0.36614583333333334" />
+        <entry key="..\:/asd/study/kotlin/Weight_N_Balance/app/src/main/res/layout/pilot_weight_alert.xml" value="0.36614583333333334" />
       </map>
     </option>
   </component>

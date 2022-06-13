@@ -6,17 +6,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/middle_blue">
+        android:background="@color/middle_blue"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/ractangle_square">
+            android:background="@drawable/ractangle_square"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FWD PAX EDIT"
+                android:textColor="@color/white"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -259,6 +267,7 @@
                     android:src="@drawable/plus_icon"/>
 
             </LinearLayout>
+
 
             <Button
                 android:id="@+id/confirmBtn"

@@ -8,6 +8,8 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.neppplus.weight_n_balance.MainActivity
 import com.neppplus.weight_n_balance.R
 import com.neppplus.weight_n_balance.customAlert.OverViewActivity
+import com.neppplus.weight_n_balance.fragments.OverViewFragment
+import com.neppplus.weight_n_balance.fragments.WeightFragment
 
 class weightAndBalanceAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
     override fun getItemCount(): Int {
@@ -16,8 +18,8 @@ class weightAndBalanceAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> MainActivity()
-            else -> OverViewActivity()
+            0 -> WeightFragment()
+            else -> OverViewFragment()
         }
     }
 }

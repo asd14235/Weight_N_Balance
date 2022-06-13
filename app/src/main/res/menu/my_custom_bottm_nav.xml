@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:id="@+id/myAppointments"
+            
+            android:icon="@drawable/calendar_icon"
+            android:title="Weight&amp;Balance"/>
+        <item android:id="@+id/invitedAppointments"
+            android:icon="@drawable/invite_icon"
+            android:title="CG보기"/>
+        <item android:id="@+id/settings"
+            android:icon="@drawable/setting_icon"
+            android:title="설정"/>
+
+
+
+
+    </menu>

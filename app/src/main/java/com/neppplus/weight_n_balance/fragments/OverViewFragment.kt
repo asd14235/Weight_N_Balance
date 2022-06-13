@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.neppplus.weight_n_balance.databinding.FragmentOverViewBinding
+import java.util.*
 
-class OverViewFragment : Fragment(){
+class OverViewFragment : Fragment() {
 
-    lateinit var binding : FragmentOverViewBinding
+    lateinit var binding: FragmentOverViewBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,5 +25,4 @@ class OverViewFragment : Fragment(){
         super.onViewCreated(view, savedInstanceState)
 
     }
-
 }

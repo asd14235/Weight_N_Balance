@@ -19,14 +19,9 @@ class OverViewActivity : AppCompatActivity() {
     var lineDataSet = ArrayList<ILineDataSet>()
     var lineData : LineData = LineData()
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_over_view)
-
         initchartData()
         initChart()
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,7 +13,16 @@
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/MainViewPager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ractangle_sqare_more_rounded"
+            app:backgroundTint="@color/dark_blue"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/my_custom_bottm_nav"/>
 
     </LinearLayout>
 

@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.neppplus.weight_n_balance.customAlert.OverViewActivity
 import com.neppplus.weight_n_balance.databinding.ActivityFwdPaxAlertBinding
 import com.neppplus.weight_n_balance.databinding.ActivityMainBinding
 import com.neppplus.weight_n_balance.databinding.ActivityPilotWeightBinding
@@ -33,9 +34,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val myIntent = Intent(this, pilotWeightActivity::class.java)
+        val myIntent2 = Intent(this, OverViewActivity::class.java)
 
         weightBtn.setOnClickListener {
             startActivityForResult(myIntent, 1002)
+        }
+
+        testBtn.setOnClickListener {
+            startActivity(myIntent2)
         }
 
         binding.fwdPaxLayout.setOnClickListener {
@@ -82,14 +88,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-//        val pilotData = data?.getStringExtra("pilotWeight")
-//        val coPilotData = data?.getStringExtra("coPilotWeight")
-//        val pax1 = data?.getStringExtra("pax1")
-//        val pax2 = data?.getStringExtra("pax2")
-//        val pax3 = data?.getStringExtra("pax3")
-//        val apax1 = data?.getStringExtra("apax1")
-//        val apax2 = data?.getStringExtra("apax2")
-//        val apax3 = data?.getStringExtra("apax3")
+
         if (resultCode == Activity.RESULT_OK) {
             mWeightData = data?.getSerializableExtra("weightData") as WeightData
 
@@ -131,6 +130,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    fun testBtn() {
+        val myItent = Intent()
     }
 
 }

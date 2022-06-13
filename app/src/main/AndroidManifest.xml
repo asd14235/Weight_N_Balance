@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Weight_N_Balance">
         <activity
+            android:name=".customAlert.OverViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".Alerts.fwdPaxAlert"
             android:exported="false" />
         <activity

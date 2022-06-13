@@ -18,7 +18,7 @@ class OverViewActivity : AppCompatActivity() {
     var charData = ArrayList<Entry>()
     var lineDataSet = ArrayList<ILineDataSet>()
     var lineData : LineData = LineData()
-    lateinit var chart : LineChart
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,10 +26,12 @@ class OverViewActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_over_view)
+
         initchartData()
         initChart()
 
     }
+    lateinit var chart : LineChart
 
     fun initchartData() {
         charData.add(Entry(-240f, 0f))

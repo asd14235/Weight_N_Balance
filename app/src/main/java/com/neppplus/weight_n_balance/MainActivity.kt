@@ -4,23 +4,16 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.widget.Button
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.neppplus.weight_n_balance.customAlert.OverViewActivity
-import com.neppplus.weight_n_balance.databinding.ActivityFwdPaxAlertBinding
 import com.neppplus.weight_n_balance.databinding.ActivityMainBinding
-import com.neppplus.weight_n_balance.databinding.ActivityPilotWeightBinding
-import com.neppplus.weight_n_balance.databinding.AftPaxWeightAlertBinding
 import com.neppplus.weight_n_balance.dialog.AftPaxAlertDialog
 import com.neppplus.weight_n_balance.dialog.CustomAlertDialog
 import com.neppplus.weight_n_balance.dialog.PilotWeightAlertDialog
 import com.neppplus.weight_n_balance.weightData.WeightData
 import com.neppplus.weight_n_balance.weights.pilotWeightActivity
-import kotlinx.android.synthetic.main.activity_fwd_pax_alert.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

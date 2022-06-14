@@ -11,9 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Weight_N_Balance">
-        <activity
-            android:name=".Adapters.weightAndBalanceAdapter"
-            android:exported="false" />
+
         <activity
             android:name=".customAlert.OverViewActivity"
             android:exported="false" />

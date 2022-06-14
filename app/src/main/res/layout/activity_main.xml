@@ -22,6 +22,7 @@
             android:background="@drawable/ractangle_sqare_more_rounded"
             app:backgroundTint="@color/dark_blue"
             app:itemTextColor="@color/white"
+            app:itemIconTint="@color/white"
             app:menu="@menu/my_custom_bottm_nav"/>
 
     </LinearLayout>

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -24,6 +25,7 @@ class pilotWeightActivity : AppCompatActivity() {
     var aPax1: Int = 0
     var aPax2: Int = 0
     var aPax3: Int = 0
+    var fuel : Int = 0
 
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -48,6 +50,7 @@ class pilotWeightActivity : AppCompatActivity() {
         FwdPaxWeight()
         AftPaxAdd()
         AftPaxWeight()
+        fuelTank()
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -77,25 +80,17 @@ class pilotWeightActivity : AppCompatActivity() {
 
     fun conFirmBtn() {
         conFirmBtn.setOnClickListener {
-            val pilotWeight = weightEdt.text.toString()
-            val coPilotWeight = weightEdt2.text.toString()
-            val pax1Weight = PaxWeightEdt1.text.toString()
-            val pax2Weight = PaxWeightEdt2.text.toString()
-            val pax3Weight = PaxWeightEdt3.text.toString()
-            val apax1Weight = AftPaxWeightEdt1.text.toString()
-            val apax2Weight = AftPaxWeightEdt2.text.toString()
-            val apax3Weight = AftPaxWeightEdt3.text.toString()
-
-//            inputData 변수설정
+            val pilotWeight = checkEdit(weightEdt)
+            val coPilotWeight = checkEdit(weightEdt2)
+            val pax1Weight = checkEdit(PaxWeightEdt1)
+            val pax2Weight = checkEdit(PaxWeightEdt2)
+            val pax3Weight = checkEdit(PaxWeightEdt3)
+            val apax1Weight = checkEdit(AftPaxWeightEdt1)
+            val apax2Weight = checkEdit(AftPaxWeightEdt2)
+            val apax3Weight = checkEdit(AftPaxWeightEdt3)
+            val fuel = checkEdit(FuelTank1Edt1)
             val resultIntent = Intent()
-//            resultIntent.putExtra("pilotWeight", pilotWeight)
-//            resultIntent.putExtra("coPilotWeight", coPilotWeight)
-//            resultIntent.putExtra("pax1",pax1Weight)
-//            resultIntent.putExtra("pax2",pax2Weight)
-//            resultIntent.putExtra("pax3",pax3Weight)
-//            resultIntent.putExtra("apax1",apax1Weight)
-//            resultIntent.putExtra("apax2",apax2Weight)
-//            resultIntent.putExtra("apax3",apax3Weight)
+
             resultIntent.putExtra(
                 "weightData",
                 WeightData(
@@ -107,6 +102,7 @@ class pilotWeightActivity : AppCompatActivity() {
                     apax1Weight,
                     apax2Weight,
                     apax3Weight,
+                    fuel,
                 )
             )
             setResult(Activity.RESULT_OK, resultIntent)
@@ -182,6 +178,19 @@ class pilotWeightActivity : AppCompatActivity() {
         AftPAXWeightSlider3.addOnChangeListener { slider, value, fromUser ->
             aPax3 = AftPAXWeightSlider3.value.toInt()
             AftPaxWeightEdt3.setText((value.toInt().toString()))
+        }
+    }
+    fun fuelTank() {
+        FuelTank1Slieder.addOnChangeListener { slider, value, fromUser ->
+            fuel = FuelTank1Slieder.value.toInt()
+            FuelTank1Edt1.setText((value.toInt().toString()))
+        }
+    }
+    fun checkEdit(editText: EditText) : Int {
+        if ( editText.text.toString().isBlank()) {
+            return 0
+        } else {
+            return editText.text.toString().toInt()
         }
     }
 }

@@ -9,7 +9,7 @@
         android:background="@color/middle_blue">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center_vertical"
@@ -26,22 +26,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:layout_marginStart="90dp"
+                android:layout_marginStart="100dp"
                 android:text="ITEM"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:layout_marginStart="70dp"
+                android:layout_marginStart="120dp"
                 android:text="WEIGHT(KG)"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:layout_marginStart="5dp"
-                android:text="CG(XCGm)"/>
 
         </LinearLayout>
 
@@ -61,22 +54,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="50dp"
                 android:text="Actual Empty Weight"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="80dp"
                 android:text="2094.14"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:layout_marginStart="30dp"
-                android:text="0.02"/>
+
 
         </LinearLayout>
 
@@ -96,23 +84,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="50dp"
                 android:text="Additional Equipment"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="80dp"
                 android:text="345.41"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:text="0.2"
-                android:textColor="@color/white" />
-
 
         </LinearLayout>
 
@@ -132,23 +112,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="50dp"
                 android:text="커버류, 호기공구함 등"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:layout_marginStart="60dp"
+                android:layout_marginStart="100dp"
                 android:text="50"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:layout_marginStart="55dp"
-                android:text="-0.62"/>
-
 
         </LinearLayout>
 
@@ -169,7 +141,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:layout_marginStart="45dp"
+                android:layout_marginStart="105dp"
                 android:text="Pilot"/>
 
             <TextView
@@ -179,13 +151,6 @@
                 android:textColor="@color/white"
                 android:layout_marginStart="160dp"
                 android:text="50"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:layout_marginStart="65dp"
-                android:text="3.1"/>
 
         </LinearLayout>
 
@@ -205,23 +170,76 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="90dp"
                 android:text="CoPilot"/>
 
             <TextView
+                android:id="@+id/coPilotWeightTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="140dp"
+                android:layout_marginStart="142dp"
                 android:text="50"
                 android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:layout_marginStart="55dp"
-                android:text="3.1"/>
+                android:layout_marginStart="10dp"
+                android:text="연료"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="90dp"
+                android:text="Fuel Tank #1"/>
+
+            <TextView
+                android:id="@+id/fuelTank1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="125dp"
+                android:text="50"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"
+                android:text="연료"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="90dp"
+                android:text="Fuel Tank #2"/>
+
+            <TextView
+                android:id="@+id/fuelTank2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="125dp"
+                android:text="50"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 

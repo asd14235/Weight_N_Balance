@@ -4,9 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.neppplus.weight_n_balance.Adapters.weightAndBalanceAdapter
 import com.neppplus.weight_n_balance.databinding.ActivityMainBinding
+import com.neppplus.weight_n_balance.weightData.WeightData
 
 class MainActivity : AppCompatActivity() {
-
+    var mWeightData = WeightData()
     lateinit var mPagerAdapter : weightAndBalanceAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {

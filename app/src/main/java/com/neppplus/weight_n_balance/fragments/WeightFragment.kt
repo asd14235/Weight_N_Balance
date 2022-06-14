@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.neppplus.weight_n_balance.MainActivity
 import com.neppplus.weight_n_balance.customAlert.OverViewActivity
 import com.neppplus.weight_n_balance.databinding.FragmentWeightBinding
 import com.neppplus.weight_n_balance.dialog.AftPaxAlertDialog
@@ -21,9 +22,9 @@ import kotlinx.android.synthetic.main.fragment_weight.*
 
 class WeightFragment : Fragment() {
 
-    lateinit var binding : FragmentWeightBinding
+    lateinit var binding: FragmentWeightBinding
 
-    lateinit var mWeightData : WeightData
+    lateinit var mWeightData: WeightData
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,14 +39,10 @@ class WeightFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val myIntent = Intent(requireContext(), pilotWeightActivity::class.java)
-        val myIntent2 = Intent(requireContext(), OverViewActivity::class.java)
+
 
         weightBtn.setOnClickListener {
             startActivityForResult(myIntent, 1002)
-        }
-
-        testBtn.setOnClickListener {
-            startActivity(myIntent2)
         }
 
         binding.fwdPaxLayout.setOnClickListener {
@@ -57,20 +54,30 @@ class WeightFragment : Fragment() {
             alert.binding.confirmBtn.setOnClickListener {
                 setPaxTxt1.text = "${alert.binding.alertPaxWeightEdt1.text} KG"
                 setPaxTxt2.text = "${alert.binding.PaxWeightEdt2.text} KG"
-                fwdPaxLayer2.visibility = View.VISIBLE
-                Log.d("asd",alert.binding.PaxWeightEdt2.toString())
                 setPaxTxt3.text = "${alert.binding.PaxWeightEdt3.text} KG"
-                fwdPaxLayer3.visibility = View.VISIBLE
+                if (alert.binding.PaxWeightEdt2.text.isNullOrBlank()) {
+                    fwdPaxLayer2.visibility = View.GONE
+                } else {
+                    fwdPaxLayer2.visibility = View.VISIBLE
+                    fwdPaxLayer3.visibility = View.GONE
+                }
+                if (!alert.binding.PaxWeightEdt3.text.isNullOrBlank()) {
+                    fwdPaxLayer3.visibility = View.VISIBLE
+                } else {
+                    fwdPaxLayer3.visibility = View.GONE
+                }
                 alert.dialog.dismiss()
             }
-        }
-        binding.pilotWeightLayer.setOnClickListener {
-            val pilotAlert = PilotWeightAlertDialog(requireContext())
-            pilotAlert.myDialog()
-            pilotAlert.binding.pilotWeightEdtBtn.setOnClickListener {
-                setPilotWeight.text = "${pilotAlert.binding.weightEdt.text} KG"
-                setCoPilotWeight.text = "${pilotAlert.binding.weightEdt2.text} KG"
-                pilotAlert.dialog.dismiss()
+
+            binding.pilotWeightLayer.setOnClickListener {
+                val pilotAlert = PilotWeightAlertDialog(requireContext())
+                pilotAlert.myDialog()
+
+                pilotAlert.binding.pilotWeightEdtBtn.setOnClickListener {
+                    setPilotWeight.text = "${pilotAlert.binding.weightEdt.text} KG"
+                    setCoPilotWeight.text = "${pilotAlert.binding.weightEdt2.text} KG"
+                    pilotAlert.dialog.dismiss()
+                }
             }
         }
         binding.aftLayout.setOnClickListener {
@@ -81,9 +88,19 @@ class WeightFragment : Fragment() {
                 Toast.makeText(requireContext(), "변경 완료", Toast.LENGTH_SHORT).show()
                 setAPaxTxt1.text = "${Aftalert.binding.AftPaxWeightEdt1.text} KG"
                 setAPaxTxt2.text = "${Aftalert.binding.AftPaxWeightEdt2.text} KG"
-                AftPax1.visibility = View.VISIBLE
                 setAPaxTxt3.text = "${Aftalert.binding.AftPaxWeightEdt3.text} KG"
-                AftPax2.visibility = View.VISIBLE
+
+                if (Aftalert.binding.AftPaxWeightEdt2.text.isNullOrBlank()) {
+                    AftPax1.visibility = View.GONE
+                } else {
+                    AftPax1.visibility = View.VISIBLE
+                    AftPax2.visibility = View.GONE
+                }
+                if (!Aftalert.binding.AftPaxWeightEdt3.text.isNullOrBlank()) {
+                    AftPax2.visibility = View.VISIBLE
+                } else {
+                    AftPax2.visibility = View.GONE
+                }
                 Aftalert.dialog.dismiss()
             }
 
@@ -96,6 +113,8 @@ class WeightFragment : Fragment() {
         if (resultCode == Activity.RESULT_OK) {
 
             mWeightData = data?.getSerializableExtra("weightData") as WeightData
+            (requireContext() as MainActivity).mWeightData = mWeightData
+//                  다녀왔을때 메인액티비티에 아래 자료를 넣는다.
 
             setPilotWeight.text = "${mWeightData.pilotWeight} KG"
             setCoPilotWeight.text = "${mWeightData.coPilotWeight} KG"

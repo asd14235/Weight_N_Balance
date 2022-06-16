@@ -4,14 +4,14 @@ import java.io.Serializable
 
 data class WeightData(
 
-    val pilotWeight : Int = 0 ,
-    val coPilotWeight: Int=0 ,
-    val pax1: Int=0 ,
-    val pax2: Int=0 ,
-    val pax3: Int=0 ,
-    val apax1: Int=0 ,
-    val apax2: Int=0 ,
-    val apax3: Int=0 ,
-    val fuel: Int=0 ,
+    var pilotWeight : Int = 0 ,
+    var coPilotWeight: Int = 0 ,
+    var pax1: Int=0 ,
+    var pax2: Int=0 ,
+    var pax3: Int=0 ,
+    var apax1: Int=0 ,
+    var apax2: Int=0 ,
+    var apax3: Int=0 ,
+    var fuel: Int=0 ,
 
     ) : Serializable

@@ -58,12 +58,16 @@ class WeightFragment : Fragment() {
             alert.binding.titleTxt.text = "PAX 1"
             alert.myDialog()
 
+            alert.binding.alertPaxWeightEdt1.setText(binding.setPaxTxt1.text)
+            alert.binding.PaxWeightEdt2.setText(binding.setPaxTxt2.text)
+            alert.binding.PaxWeightEdt3.setText(binding.setPaxTxt3.text)
+
             alert.binding.confirmBtn.setOnClickListener {
-                setPaxTxt1.text = "${alert.binding.alertPaxWeightEdt1.text} KG"
+                setPaxTxt1.text = "${alert.binding.alertPaxWeightEdt1.text}"
                 pax1Moment.text = "${dec.format((AppUtil.checkEdit(alert.binding.alertPaxWeightEdt1))*3726)}"
-                setPaxTxt2.text = "${alert.binding.PaxWeightEdt2.text} KG"
+                setPaxTxt2.text = "${alert.binding.PaxWeightEdt2.text}"
                 pax2Moment.text = "${dec.format((AppUtil.checkEdit(alert.binding.PaxWeightEdt2))*3726)}"
-                setPaxTxt3.text = "${alert.binding.PaxWeightEdt3.text} KG"
+                setPaxTxt3.text = "${alert.binding.PaxWeightEdt3.text}"
                 pax3Moment.text = "${dec.format((AppUtil.checkEdit(alert.binding.PaxWeightEdt3))*3726)}"
                 if (alert.binding.PaxWeightEdt2.text.isNullOrBlank()) {
                     fwdPaxLayer2.visibility = View.GONE
@@ -87,11 +91,14 @@ class WeightFragment : Fragment() {
             val pilotAlert = PilotWeightAlertDialog(requireContext())
             pilotAlert.myDialog()
 
+            pilotAlert.binding.weightEdt.setText(setPilotWeight.text)
+            pilotAlert.binding.weightEdt2.setText(setCoPilotWeight.text)
+
             pilotAlert.binding.pilotWeightEdtBtn.setOnClickListener {
-                setPilotWeight.text = "${pilotAlert.binding.weightEdt.text} KG"
+                setPilotWeight.text = "${pilotAlert.binding.weightEdt.text}"
                 pilotMoment.text = "${dec.format((AppUtil.checkEdit(pilotAlert.binding.weightEdt))*2867)}"
 
-                setCoPilotWeight.text = "${pilotAlert.binding.weightEdt2.text} KG"
+                setCoPilotWeight.text = "${pilotAlert.binding.weightEdt2.text}"
                 CopilotMoment.text = "${dec.format((AppUtil.checkEdit(pilotAlert.binding.weightEdt2))*2868)}"
                 pilotAlert.dialog.dismiss()
             }
@@ -100,13 +107,17 @@ class WeightFragment : Fragment() {
             val Aftalert = AftPaxAlertDialog(requireContext())
             Aftalert.myDialog()
 
+            Aftalert.binding.AftPaxWeightEdt1.setText(setAPaxTxt1.text)
+            Aftalert.binding.AftPaxWeightEdt2.setText(setAPaxTxt2.text)
+            Aftalert.binding.AftPaxWeightEdt3.setText(setAPaxTxt3.text)
+
             Aftalert.binding.conFirmBtn.setOnClickListener {
                 Toast.makeText(requireContext(), "변경 완료", Toast.LENGTH_SHORT).show()
-                setAPaxTxt1.text = "${Aftalert.binding.AftPaxWeightEdt1.text} KG"
+                setAPaxTxt1.text = "${Aftalert.binding.AftPaxWeightEdt1.text}"
                 AftPaxMoment1.text = "${dec.format((AppUtil.checkEdit(Aftalert.binding.AftPaxWeightEdt1))*4616)}"
-                setAPaxTxt2.text = "${Aftalert.binding.AftPaxWeightEdt2.text} KG"
+                setAPaxTxt2.text = "${Aftalert.binding.AftPaxWeightEdt2.text}"
                 AftPaxMoment2.text = "${dec.format((AppUtil.checkEdit(Aftalert.binding.AftPaxWeightEdt2))*4616)}"
-                setAPaxTxt3.text = "${Aftalert.binding.AftPaxWeightEdt3.text} KG"
+                setAPaxTxt3.text = "${Aftalert.binding.AftPaxWeightEdt3.text}"
                 AftPaxMoment3.text = "${dec.format((AppUtil.checkEdit(Aftalert.binding.AftPaxWeightEdt3))*4616)}"
 
                 if (Aftalert.binding.AftPaxWeightEdt2.text.isNullOrBlank()) {
@@ -128,7 +139,16 @@ class WeightFragment : Fragment() {
             val fuelAlert = FuelWeightAlertDialog(requireContext())
             fuelAlert.myDialog()
 
-            fuelAlert.binding.fuelEdtBtn.setOnClickListener {  }
+            fuelAlert.binding.FuelWeightEdt.setText(fuelTankTxt.text)
+
+            fuelAlert.binding.fuelEdtBtn.setOnClickListener {
+                fuelTankTxt.text = "${fuelAlert.binding.FuelWeightEdt.text}"
+                (requireContext() as MainActivity).mWeightData.fuel = fuelAlert.binding.FuelWeightEdt.text.toString().toInt()
+
+                FuelMoment.text = "${dec.format((AppUtil.checkEdit(fuelAlert.binding.FuelWeightEdt))*4582)}"
+
+                fuelAlert.dialog.dismiss()
+            }
         }
 
     }
@@ -142,6 +162,9 @@ class WeightFragment : Fragment() {
             mWeightData = data?.getSerializableExtra("weightData") as WeightData
             (requireContext() as MainActivity).mWeightData = mWeightData
 //                  다녀왔을때 메인액티비티에 아래 자료를 넣는다.
+            Log.d("asd1",mWeightData.toString())
+            Log.d("asd2","${(requireContext() as MainActivity).mWeightData}")
+
 
             setPilotWeight.text = "${mWeightData.pilotWeight} KG"
             pilotMoment.text = "${dec.format((mWeightData.pilotWeight)*2867)}"

@@ -2,6 +2,7 @@ package com.neppplus.weight_n_balance.fragments
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,10 +14,12 @@ import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.neppplus.weight_n_balance.MainActivity
+import com.neppplus.weight_n_balance.Utils.AppUtil
 import com.neppplus.weight_n_balance.Utils.DataUtil
 import com.neppplus.weight_n_balance.databinding.FragmentOverViewBinding
 import com.neppplus.weight_n_balance.weightData.WeightData
 import kotlinx.android.synthetic.main.activity_over_view.*
+import kotlinx.android.synthetic.main.fragment_weight.*
 import java.util.*
 
 class OverViewFragment : Fragment() {
@@ -35,10 +38,7 @@ class OverViewFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var weightData = (requireContext() as MainActivity).mWeightData
-
-        binding.pilotWeightTxt.text = weightData.pilotWeight.toString()
-        binding.coPilotWeightTxt.text = weightData.coPilotWeight.toString()
+        setUIFromData()
 
         var average = 0F
         for (stock in DataUtil.getStockData()) {
@@ -103,10 +103,19 @@ class OverViewFragment : Fragment() {
 
         lineChart.getTransformer(YAxis.AxisDependency.RIGHT)
         lineChart.xAxis.position = XAxis.XAxisPosition.BOTTOM
+    }
 
+    override fun onResume() {
+        super.onResume()
+        setUIFromData()
+    }
+    fun setUIFromData() {
+        var weightData = (requireContext() as MainActivity).mWeightData
 
-
-
+        binding.pilotWeightTxt.text = weightData.pilotWeight.toString()
+        binding.coPilotWeightTxt.text = weightData.coPilotWeight.toString()
+        binding.fuelTank1.text = weightData.fuel.toString()
+        Log.d("asd",weightData.toString())
 
     }
 }

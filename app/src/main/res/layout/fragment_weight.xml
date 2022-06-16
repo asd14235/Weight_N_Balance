@@ -73,7 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -86,16 +86,18 @@
                         android:id="@+id/setPilotWeight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
-                        android:text="00"
+                        android:text=" "
                         android:textColor="@color/white" />
 
                     <TextView
                         android:id="@+id/setCoPilotWeight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
-                        android:text="00"
+                        android:text=" "
                         android:textColor="@color/white" />
 
                 </LinearLayout>
@@ -239,7 +241,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="60dp"
                     android:textColor="@color/white"
                     android:text="3,726.00"/>
 
@@ -280,7 +282,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="60dp"
                     android:layout_marginTop="10dp"
                     android:textColor="@color/white"
                     android:text="3,726.00"/>
@@ -323,7 +325,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="60dp"
                     android:layout_marginTop="10dp"
                     android:textColor="@color/white"
                     android:text="3,726.00"/>
@@ -406,14 +408,14 @@
                     android:id="@+id/setAPaxTxt1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="65dp"
+                    android:layout_marginStart="60dp"
                     android:text=" "
                     android:textColor="@color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="60dp"
                     android:textColor="@color/white"
                     android:text="4,616.00"/>
 
@@ -445,14 +447,14 @@
                     android:id="@+id/setAPaxTxt2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="65dp"
+                    android:layout_marginStart="60dp"
                     android:text=" "
                     android:textColor="@color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="60dp"
                     android:textColor="@color/white"
                     android:text="4,616.00"/>
 
@@ -484,14 +486,14 @@
                     android:id="@+id/setAPaxTxt3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="65dp"
+                    android:layout_marginStart="60dp"
                     android:text=" "
                     android:textColor="@color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="60dp"
                     android:textColor="@color/white"
                     android:text="4,616.00"/>
 

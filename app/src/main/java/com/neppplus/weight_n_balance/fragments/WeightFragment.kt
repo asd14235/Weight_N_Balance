@@ -69,6 +69,7 @@ class WeightFragment : Fragment() {
                 pax2Moment.text = "${dec.format((AppUtil.checkEdit(alert.binding.PaxWeightEdt2))*3726)}"
                 setPaxTxt3.text = "${alert.binding.PaxWeightEdt3.text}"
                 pax3Moment.text = "${dec.format((AppUtil.checkEdit(alert.binding.PaxWeightEdt3))*3726)}"
+
                 if (alert.binding.PaxWeightEdt2.text.isNullOrBlank()) {
                     fwdPaxLayer2.visibility = View.GONE
                 } else {

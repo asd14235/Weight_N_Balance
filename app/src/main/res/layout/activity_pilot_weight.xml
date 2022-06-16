@@ -5,8 +5,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="@color/middle_blue"
+        android:orientation="vertical"
         android:padding="20dp">
 
         <ScrollView
@@ -30,8 +30,8 @@
                         android:id="@+id/currentTimeEdt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="입력 시간"
                         android:textColor="@color/white"
-                        android:text="Current Time"
                         android:textSize="20sp" />
 
                     <TextView
@@ -39,8 +39,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
-                        android:textColor="@color/white"
                         android:text="줄루타임 입력"
+                        android:textColor="@color/white"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -48,10 +48,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:text="Pilot"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_gravity="center"/>
+                    android:text="Pilot"
+                    android:textColor="@color/white" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -68,33 +68,34 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="20dp"
+                            android:text="Pilot"
                             android:textColor="@color/white"
-                            android:text="Pilot"/>
+                            android:textSize="20dp" />
+
                         <Space
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1" />
 
                         <EditText
                             android:id="@+id/weightEdt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="몸무게를 입력하세요."
-                            android:gravity="end"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/white"
                             android:background="@null"
-                            android:textSize="20sp"
+                            android:gravity="end"
+                            android:hint="몸무게를 입력하세요."
                             android:imeOptions="actionDone"
                             android:inputType="number"
-                            />
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="20sp" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=" KG"
-                            android:textSize="20sp"
-                            android:textColor="@color/white"/>
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
 
 
                     </LinearLayout>
@@ -103,31 +104,31 @@
                         android:id="@+id/pilotWeightSlider"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:thumbColor="@color/dark_blue"
-                        app:trackColor="@color/near_black"
-                        app:thumbStrokeColor="@color/black"
-                        app:haloColor="@color/white"
                         android:padding="20dp"
                         android:value="80.0"
                         android:valueFrom="0.0"
-                        android:valueTo="200.0" />
+                        android:valueTo="200.0"
+                        app:haloColor="@color/white"
+                        app:thumbColor="@color/dark_blue"
+                        app:thumbStrokeColor="@color/black"
+                        app:trackColor="@color/near_black" />
 
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:text="CoPilot"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_gravity="center"/>
+                    android:text="CoPilot"
+                    android:textColor="@color/white" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
                     android:background="@drawable/ractangle_square"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -138,65 +139,66 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="20dp"
                             android:layout_weight="1"
+                            android:text="CoPilot"
                             android:textColor="@color/white"
-                            android:text="CoPilot"/>
+                            android:textSize="20dp" />
 
                         <Space
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1" />
 
                         <EditText
                             android:id="@+id/weightEdt2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="몸무게를 입력하세요."
-                            android:textColorHint="@color/white"
-                            android:gravity="end"
-                            android:textColor="@color/white"
                             android:background="@null"
-                            android:textSize="20sp"
+                            android:gravity="end"
+                            android:hint="몸무게를 입력하세요."
                             android:imeOptions="actionDone"
-                            android:inputType="number"/>
+                            android:inputType="number"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:text=" KG"
                             android:textColor="@color/white"
-                            android:textSize="20dp"
-                            android:text=" KG"/>
+                            android:textSize="20dp" />
 
                     </LinearLayout>
+
                     <com.google.android.material.slider.Slider
                         android:id="@+id/pilotWeightSlider2"
-                        android:padding="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:valueFrom="0.0"
+                        android:padding="20dp"
                         android:value="100.0"
+                        android:valueFrom="0.0"
                         android:valueTo="200.0"
+                        app:haloColor="@color/white"
                         app:thumbColor="@color/dark_blue"
-                        app:trackColor="@color/near_black"
                         app:thumbStrokeColor="@color/black"
-                        app:haloColor="@color/white"/>
+                        app:trackColor="@color/near_black" />
 
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="FWD Passenger"
-                    android:textColor="@color/white"
-                    android:layout_marginTop="10dp"/>
+                    android:textColor="@color/white" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:background="@drawable/ractangle_square">
+                    android:background="@drawable/ractangle_square"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -207,34 +209,34 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="20dp"
+                            android:text="PAX 1"
                             android:textColor="@color/white"
-                            android:text="PAX 1"/>
+                            android:textSize="20dp" />
 
                         <Space
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1" />
 
                         <EditText
                             android:id="@+id/PaxWeightEdt1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="몸무게를 입력하세요."
-                            android:textColorHint="@color/white"
-                            android:gravity="end"
-                            android:textColor="@color/white"
                             android:background="@null"
-                            android:textSize="20sp"
+                            android:gravity="end"
+                            android:hint="몸무게를 입력하세요."
                             android:imeOptions="actionDone"
-                            android:inputType="number"/>
+                            android:inputType="number"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:text=" KG"
                             android:textColor="@color/white"
-                            android:textSize="20dp"
-                            android:text=" KG"/>
+                            android:textSize="20dp" />
 
                     </LinearLayout>
 
@@ -249,54 +251,54 @@
                         app:haloColor="@color/white"
                         app:thumbColor="@color/dark_blue"
                         app:thumbStrokeColor="@color/black"
-                        app:trackColor="@color/near_black"/>
+                        app:trackColor="@color/near_black" />
 
                     <ImageView
                         android:id="@+id/addFPaxBtn"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/plus_icon"/>
+                        android:src="@drawable/plus_icon" />
 
                     <LinearLayout
                         android:id="@+id/fpax2Layer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="20dp"
+                            android:text="PAX 2"
                             android:textColor="@color/white"
-                            android:text="PAX 2"/>
+                            android:textSize="20dp" />
 
                         <Space
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1" />
 
                         <EditText
                             android:id="@+id/PaxWeightEdt2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="몸무게를 입력하세요"
-                            android:textColorHint="@color/white"
-                            android:gravity="end"
-                            android:textColor="@color/white"
                             android:background="@null"
-                            android:textSize="20sp"
+                            android:gravity="end"
+                            android:hint="몸무게를 입력하세요"
                             android:imeOptions="actionDone"
-                            android:inputType="number"/>
+                            android:inputType="number"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:text=" KG"
                             android:textColor="@color/white"
-                            android:textSize="20dp"
-                            android:text=" KG"/>
+                            android:textSize="20dp" />
 
                     </LinearLayout>
 
@@ -304,63 +306,63 @@
                         android:id="@+id/PAXWeightSlider2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:thumbColor="@color/dark_blue"
-                        app:trackColor="@color/near_black"
-                        app:thumbStrokeColor="@color/black"
-                        app:haloColor="@color/white"
                         android:padding="20dp"
                         android:value="80.0"
                         android:valueFrom="0.0"
                         android:valueTo="200.0"
-                        android:visibility="gone"/>
+                        android:visibility="gone"
+                        app:haloColor="@color/white"
+                        app:thumbColor="@color/dark_blue"
+                        app:thumbStrokeColor="@color/black"
+                        app:trackColor="@color/near_black" />
 
                     <ImageView
                         android:id="@+id/addFPaxBtn2"
-                        android:visibility="gone"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/plus_icon"/>
+                        android:src="@drawable/plus_icon"
+                        android:visibility="gone" />
 
                     <LinearLayout
-                        android:visibility="gone"
                         android:id="@+id/fPax3Layer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="20dp"
+                            android:text="PAX 3"
                             android:textColor="@color/white"
-                            android:text="PAX 3"/>
+                            android:textSize="20dp" />
 
                         <Space
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1" />
 
                         <EditText
                             android:id="@+id/PaxWeightEdt3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="몸무게를 입력하세요"
-                            android:textColorHint="@color/white"
-                            android:gravity="end"
-                            android:textColor="@color/white"
                             android:background="@null"
-                            android:textSize="20sp"
+                            android:gravity="end"
+                            android:hint="몸무게를 입력하세요"
                             android:imeOptions="actionDone"
-                            android:inputType="number"/>
+                            android:inputType="number"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:text=" KG"
                             android:textColor="@color/white"
-                            android:textSize="20dp"
-                            android:text=" KG"/>
+                            android:textSize="20dp" />
 
                     </LinearLayout>
 
@@ -368,49 +370,49 @@
                         android:id="@+id/PAXWeightSlider3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:thumbColor="@color/dark_blue"
-                        app:trackColor="@color/near_black"
-                        app:thumbStrokeColor="@color/black"
-                        app:haloColor="@color/white"
                         android:padding="20dp"
                         android:value="80.0"
                         android:valueFrom="0.0"
                         android:valueTo="200.0"
-                        android:visibility="gone"/>
+                        android:visibility="gone"
+                        app:haloColor="@color/white"
+                        app:thumbColor="@color/dark_blue"
+                        app:thumbStrokeColor="@color/black"
+                        app:trackColor="@color/near_black" />
 
                     <ImageView
                         android:id="@+id/addFPaxBtn3"
-                        android:visibility="gone"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/plus_icon"/>
+                        android:src="@drawable/plus_icon"
+                        android:visibility="gone" />
 
                     <LinearLayout
-                        android:visibility="gone"
                         android:id="@+id/fPax4Layer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="20dp"
+                            android:text="PAX 1"
                             android:textColor="@color/white"
-                            android:text="PAX 1"/>
+                            android:textSize="20dp" />
 
                         <TextView
                             android:id="@+id/fPaxWeightTxt4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="end"
-                            android:textColor="@color/white"
-                            android:labelFor="@id/pilotWeightSlider"
                             android:layout_weight="1"
-                            android:textSize="20dp"
-                            android:text="100Kg"/>
+                            android:gravity="end"
+                            android:labelFor="@id/pilotWeightSlider"
+                            android:text="100Kg"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
 
                         <EditText
                             android:id="@+id/fPaxweightEdt4"
@@ -418,31 +420,32 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:hint="몸무게를 입력하세요"
-                            android:textColorHint="@color/white"
-                            android:textSize="13sp"
                             android:imeOptions="actionDone"
                             android:inputType="number"
-                            android:visibility="gone"/>
+                            android:textColorHint="@color/white"
+                            android:textSize="13sp"
+                            android:visibility="gone" />
 
                     </LinearLayout>
 
                     <ImageView
                         android:id="@+id/addFPaxBtn4"
-                        android:visibility="gone"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/plus_icon"/>
+                        android:src="@drawable/plus_icon"
+                        android:visibility="gone" />
 
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="AFT Passenger"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:textColor="@color/white"
-                    android:layout_marginTop="10dp"/>
+                    android:text="AFT Passenger"
+                    android:textColor="@color/white" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -450,23 +453,23 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="20dp"
+                            android:text="AFT PAX 1"
                             android:textColor="@color/white"
-                            android:text="AFT PAX 1"/>
+                            android:textSize="20dp" />
 
                         <Space
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1" />
 
                         <EditText
                             android:id="@+id/AftPaxWeightEdt1"
@@ -484,9 +487,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:text=" KG"
                             android:textColor="@color/white"
-                            android:textSize="20dp"
-                            android:text=" KG"/>
+                            android:textSize="20dp" />
 
                     </LinearLayout>
 
@@ -494,63 +497,63 @@
                         android:id="@+id/AftPAXWeightSlider1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:thumbColor="@color/dark_blue"
-                        app:trackColor="@color/near_black"
-                        app:thumbStrokeColor="@color/black"
-                        app:haloColor="@color/white"
                         android:padding="20dp"
                         android:value="80.0"
                         android:valueFrom="0.0"
-                        android:valueTo="200.0"/>
+                        android:valueTo="200.0"
+                        app:haloColor="@color/white"
+                        app:thumbColor="@color/dark_blue"
+                        app:thumbStrokeColor="@color/black"
+                        app:trackColor="@color/near_black" />
 
                     <ImageView
                         android:id="@+id/AftPaxAddBtn1"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/plus_icon"/>
+                        android:src="@drawable/plus_icon" />
 
 
                     <LinearLayout
                         android:id="@+id/AftPaxLayer2"
-                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        android:orientation="horizontal">
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="20dp"
+                            android:text="AFT PAX 2"
                             android:textColor="@color/white"
-                            android:text="AFT PAX 2"/>
+                            android:textSize="20dp" />
 
                         <Space
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1" />
 
                         <EditText
                             android:id="@+id/AftPaxWeightEdt2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="몸무게를 입력하세요"
-                            android:textColorHint="@color/white"
-                            android:gravity="end"
-                            android:textColor="@color/white"
                             android:background="@null"
-                            android:textSize="20sp"
+                            android:gravity="end"
+                            android:hint="몸무게를 입력하세요"
                             android:imeOptions="actionDone"
-                            android:inputType="number"/>
+                            android:inputType="number"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:text=" KG"
                             android:textColor="@color/white"
-                            android:textSize="20dp"
-                            android:text=" KG"/>
+                            android:textSize="20dp" />
 
                     </LinearLayout>
 
@@ -558,64 +561,64 @@
                         android:id="@+id/AftPAXWeightSlider2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:thumbColor="@color/dark_blue"
-                        app:trackColor="@color/near_black"
-                        app:thumbStrokeColor="@color/black"
-                        app:haloColor="@color/white"
-                        android:visibility="gone"
                         android:padding="20dp"
                         android:value="80.0"
                         android:valueFrom="0.0"
-                        android:valueTo="200.0"/>
+                        android:valueTo="200.0"
+                        android:visibility="gone"
+                        app:haloColor="@color/white"
+                        app:thumbColor="@color/dark_blue"
+                        app:thumbStrokeColor="@color/black"
+                        app:trackColor="@color/near_black" />
 
                     <ImageView
                         android:id="@+id/AftPaxAddBtn2"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:visibility="gone"
                         android:layout_gravity="center"
-                        android:src="@drawable/plus_icon"/>
+                        android:src="@drawable/plus_icon"
+                        android:visibility="gone" />
 
                     <LinearLayout
                         android:id="@+id/AftPaxLayer3"
-                        android:gravity="center"
-                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="20dp"
+                            android:text="AFT PAX 3"
                             android:textColor="@color/white"
-                            android:text="AFT PAX 3"/>
+                            android:textSize="20dp" />
 
                         <Space
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1" />
 
                         <EditText
                             android:id="@+id/AftPaxWeightEdt3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="몸무게를 입력하세요"
-                            android:textColorHint="@color/white"
-                            android:gravity="end"
-                            android:textColor="@color/white"
                             android:background="@null"
-                            android:textSize="20sp"
+                            android:gravity="end"
+                            android:hint="몸무게를 입력하세요"
                             android:imeOptions="actionDone"
-                            android:inputType="number"/>
+                            android:inputType="number"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:text=" KG"
                             android:textColor="@color/white"
-                            android:textSize="20dp"
-                            android:text=" KG"/>
+                            android:textSize="20dp" />
 
                     </LinearLayout>
 
@@ -623,15 +626,15 @@
                         android:id="@+id/AftPAXWeightSlider3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:thumbColor="@color/dark_blue"
-                        app:trackColor="@color/near_black"
-                        app:thumbStrokeColor="@color/black"
-                        app:haloColor="@color/white"
                         android:padding="20dp"
                         android:value="80.0"
                         android:valueFrom="0.0"
                         android:valueTo="200.0"
-                        android:visibility="gone"/>
+                        android:visibility="gone"
+                        app:haloColor="@color/white"
+                        app:thumbColor="@color/dark_blue"
+                        app:thumbStrokeColor="@color/black"
+                        app:trackColor="@color/near_black" />
 
                     <ImageView
                         android:id="@+id/AftPaxAddBtn3"
@@ -639,91 +642,90 @@
                         android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:src="@drawable/plus_icon"
-                        android:visibility="gone"/>
+                        android:visibility="gone" />
 
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:text="Fuel Tank"
-                    android:textColor="@color/white"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ractangle_square"
-                android:orientation="vertical">
+                    android:textColor="@color/white" />
 
                 <LinearLayout
-                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:background="@drawable/ractangle_square"
+                    android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="20dp"
-                        android:textColor="@color/white"
-                        android:text="Fuel Tank"/>
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                    <Space
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Fuel Tank"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
 
-                    <EditText
-                        android:id="@+id/FuelTank1Edt1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="연료량을 입력하세요."
-                        android:textColorHint="@color/white"
-                        android:gravity="end"
-                        android:textColor="@color/white"
-                        android:background="@null"
-                        android:textSize="20sp"
-                        android:imeOptions="actionDone"
-                        android:inputType="number"/>
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <EditText
+                            android:id="@+id/FuelTank1Edt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:gravity="end"
+                            android:hint="연료량을 입력하세요."
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" KG"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/FuelTank1Slieder"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="20dp"
-                        android:text=" KG"/>
+                        android:padding="20dp"
+                        android:value="80.0"
+                        android:valueFrom="0.0"
+                        android:valueTo="200.0"
+                        app:haloColor="@color/white"
+                        app:thumbColor="@color/dark_blue"
+                        app:thumbStrokeColor="@color/black"
+                        app:trackColor="@color/near_black" />
 
                 </LinearLayout>
-
-                <com.google.android.material.slider.Slider
-                    android:id="@+id/FuelTank1Slieder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:thumbColor="@color/dark_blue"
-                    app:trackColor="@color/near_black"
-                    app:thumbStrokeColor="@color/black"
-                    app:haloColor="@color/white"
-                    android:padding="20dp"
-                    android:value="80.0"
-                    android:valueFrom="0.0"
-                    android:valueTo="200.0"/>
-
-            </LinearLayout>
 
                 <Button
                     android:id="@+id/conFirmBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/dark_blue"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:text="확인"/>
+                    android:backgroundTint="@color/dark_blue"
+                    android:text="확인" />
 
             </LinearLayout>
-
 
 
         </ScrollView>
